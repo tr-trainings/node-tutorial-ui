@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style>
+<style scoped >
   .hero {
     height: 90vh;
     display: flex;

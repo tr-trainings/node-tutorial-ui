@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="user in users" :key="user.id" @click.prevent="displayUser(user)">
+            <tr v-for="user in users" :key="user.id">
               <td>{{ user.user_id }}</td>
               <td>{{ user.user_fname }}</td>
               <td>{{ user.user_lname }}</td>
@@ -72,10 +72,6 @@ export default {
     },
     async populateUserToEdit (user) {
       this.model = Object.assign({}, user)
-    },
-    async displayUser (user) {
-      this.displayModel = Object.assign({}, user)
-      console.log(this.displayModel)
     },
     async saveUser () {
       if (this.model.user_id) {
